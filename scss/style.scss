@@ -1,0 +1,267 @@
+$gradient-1: linear-gradient(94.47deg, #FFFFFF 6.12%, #DAC8FF 80.25%);
+$gradient-2: linear-gradient(180deg, #FFFFFF 0%, #DAC8FF 100%);
+$gradient-3: linear-gradient(97deg, #FFFFFF -31.45%, #B794FC 91.35%);
+$gradient-4: linear-gradient(90.32deg, #AC82FF -8.31%, #FFFFFF 148%);
+$gradient-5: linear-gradient(96.43deg, #FFFFFF -24.08%, #DDCCFF 107.82%);
+$gradient-border: linear-gradient(97deg, #FFFFFF -122.99%, #6F26FF 91.35%);
+// $gradient-border-1: linear-gradient(262.7deg, #FFFFFF -13.65%, #8649F2 93.57%);
+
+$gradient-border-1:linear-gradient(180deg, #B95DFE 0%, #FFFFFF 100%);
+
+
+
+
+$grid-columns:                14;
+$grid-row-columns:            7;
+
+$body-bg: #11111b;
+$body-color:#fff;
+
+
+@font-face {
+  font-family: "Clash Display Variable";
+  src: url("../fonts/ClashDisplay-Variable.ttf") format("truetype");
+  font-weight: 100 900; // Variable font ka range
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+
+$font-family-base: "Archivo", sans-serif;
+$headings-font-family:  "Clash Display Variable", sans-serif;
+
+
+
+$font-size-base: 1rem; // 16px
+
+// // Font Sizes
+$h1-font-size: $font-size-base * 4.25; // 68
+// $h1-font-size: min(4.25rem, calc($font-size-base + 3.5vw));
+$h2-font-size: $font-size-base * 3.75; // 60
+$h3-font-size: $font-size-base * 2.5; // 40
+$h4-font-size: $font-size-base * 2; // 32
+$h5-font-size: $font-size-base * 1.875; //30
+$h6-font-size: $font-size-base * 1.75; // 28
+$h7-font-size: $font-size-base * 1.5; // 24
+$h8-font-size: $font-size-base * 1.25; // 20
+$h9-font-size: $font-size-base * 0.87; // 14  0.87rem 
+
+$custom-font-sizes: (
+  7: $h7-font-size,
+  8: $h8-font-size,
+  9: $h9-font-size
+);
+
+
+
+$spacer: 1rem ;
+$spacers: (
+  0: 0,
+  4: $spacer * .25,
+  8: $spacer * .5,
+  16: $spacer,
+  20: $spacer * 1.25,
+  24: $spacer * 1.5,
+  28: $spacer * 1.75,
+  33: $spacer * 2.0625,
+  38: $spacer * 2.375,
+  43: $spacer * 2.6875,
+  46: $spacer * 2.875,
+  48: $spacer * 3,
+  50: $spacer * 3.125, 
+  55: $spacer * 3.438,
+  59: $spacer * 3.688,
+  82: $spacer * 5.125,
+  87: $spacer * 5.4375,
+  92: $spacer * 5.75,
+  96: $spacer * 6,
+
+  107: $spacer * 6.688,
+  144: $spacer * 9,
+  200: $spacer* 12.5,
+  220: $spacer* 13.75,
+  250: $spacer* 15.625,
+  289: $spacer * 18.063,
+
+  //250 25 30 220 
+
+);
+
+
+
+
+
+$zindex-levels: (
+  n1: -1,
+  n2: -2,
+  n3: -3,
+  0: 0,
+  1: 1,
+  2: 2,
+  3: 3
+) ;
+
+
+$position-values: (
+  0: 0,
+  45:45%,
+  50: 50%,
+
+  100: 100%
+);
+
+
+
+$custom-grid-breakpoints: ( 
+  xxxl: 1700px
+) ;
+
+
+$custom-container-max-widths: (
+  xxxl:1460px
+);
+
+
+
+
+
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/variables';
+
+
+
+
+$grid-breakpoints:map-merge($map1: $grid-breakpoints, $map2:$custom-grid-breakpoints );
+$container-max-widths:map-merge($map1: $container-max-widths, $map2:$custom-container-max-widths );
+$font-sizes:map-merge($map1:$font-sizes, $map2:$custom-font-sizes );
+
+
+
+
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+
+
+
+a{
+  text-decoration: none;
+  color:inherit; 
+}
+
+
+
+.blur-img {backdrop-filter: blur(23px)};
+
+
+
+
+
+
+
+@import'./mixins.scss';
+@import './header';
+@import'./hero-banner';
+@import'./crypto-stats';
+@import'./discover-border';
+@import'./our-product';
+@import'./our-service';
+@import'./testimonials';
+@import'./our-credentials.scss';
+@import'./our-resources';
+@import'./from';
+@import'./footer';
+
+.text-gradient-1 {
+  @include gradient-text($gradient-1);
+}
+
+.text-gradient-2 {
+  @include gradient-text($gradient-2);
+}
+
+.text-gradient-3 {
+  @include gradient-text($gradient-3);
+}
+
+.text-gradient-4 {
+  @include gradient-text($gradient-4);
+}
+
+
+
+.btn-primary{
+  background: linear-gradient(97deg, #FFFFFF -122.99%, #6F26FF 91.35%);
+  border: 1px solid #fff;
+  padding: 12px 33px;
+  clip-path: polygon(10% 0%, 100% 0, 100% 60%, 90% 100%, 0 100%, 0% 40%);
+  transition: 0.3s;
+}
+
+
+.btn-primary:hover{
+  background: linear-gradient(97deg, #6F26FF -122.99%, #9d73f1 91.35%);
+}
+
+
+.btn-secondary {
+  border: 1.5px solid transparent;
+  border-image-source:$gradient-border;
+  border-image-slice: 1;
+  background-color: transparent;
+  padding: 12px 33px;
+  clip-path: polygon(0 0, 90% 0, 100% 50%, 100% 100%, 10% 100%, 0 50%);
+  transition: 0.3s;
+}
+
+
+.gradient-border-end {
+  border-right: 1.5px solid transparent;
+  border-image: $gradient-border-1;
+  border-image-slice: 1;
+}
+
+.grid-area{
+  grid-area: 1/1; 
+}
+
+
+
+// .d-box{
+//   width: max-content;
+//   align-items: center;
+
+// }
+
+
+@media(max-width:1400px){
+  .d-box{
+  width: max-content;
+  align-items: center;
+  }
+}
+
+
+.our-res{
+  top:-10px;
+  left: -2px;
+
+}
+
+
+
+.card-img-top {
+  height: 200px;           /* Set your preferred height */
+  object-fit: cover;       /* Ensures image fills the space nicely */
+}
+
+.test{
+  
+  top:-50px;
+  // right: 200px;
+
+}
+
+

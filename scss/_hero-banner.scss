@@ -1,0 +1,57 @@
+.hero-border {
+  top: -200px;
+}
+
+
+
+@media(max-width:1700px){
+    .hero-border {
+    top: -150px;
+  }
+}
+
+
+@media(max-width:1700px){
+
+  .hero-border {top: -150px;}
+  .hero-banner h1 {
+    font-size: 3.8rem; }
+
+}
+
+
+@media(max-width:1400px){
+  .hero-border {
+   top: -120px;
+ }
+ .hero-banner h1 {
+    font-size: 3.25rem ;  // 50px 
+  }
+  .hero-banner p{
+    font-size: 1.125rem !important; //18px
+  }
+  .Cyfer-logo{
+    width: 75%;
+  }
+}
+
+@media(max-width:992px){
+  .hero-banner h1{
+    font-size:45px; //45
+
+  }
+}
+
+
+
+// @media(max-width:768px){
+//   .hero-banner h1{
+//     font-size:px;
+
+//   }
+// }
+
+
+
+
+

@@ -1,0 +1,60 @@
+header .nav-item {
+    padding: 0 1rem;
+    .nav-link{
+        padding : 0 1rem;
+        color : $white;
+        &:hover{
+            color: #7B38FF;  
+        }  
+    }
+}
+
+@media (min-width: 1200px) {
+  .navbar-collapse {
+    display: flex !important;
+  }
+  .navbar-toggler {
+    display: none;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .navbar-collapse {
+    display: none;
+  }
+  .navbar-toggler {
+    display: block;
+  }
+}
+
+
+@media (min-width:1200px){
+  header .navbar-brand {
+    transform: translate( 37px, 63px );
+  } 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
